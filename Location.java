@@ -7,7 +7,7 @@ public abstract class Location {
     private String name;
     private Player player;
 
-    private Scanner input = new Scanner(System.in); // alt sınıflara arismek icin protected kullandık
+    public static Scanner input = new Scanner(System.in);
 
     public Location(Player player, String name) {
         this.player = player;
