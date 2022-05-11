@@ -1,6 +1,6 @@
 public class Zombie extends Monster {
 
     public Zombie(){
-        super(1, "Zombie", 10, 3, 4)
+        super(1, "Zombie", 10, 3, 4);
     }
 }
