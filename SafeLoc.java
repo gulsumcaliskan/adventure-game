@@ -1,7 +1,7 @@
 public class SafeLoc extends Location {
 
-    public SafeLoc(String name, Player player){
-        super(name, player);
+    public SafeLoc(Player player, String name){
+        super(player, name);
     }
 
     @Override
