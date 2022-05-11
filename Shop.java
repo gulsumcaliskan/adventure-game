@@ -7,7 +7,7 @@ public class Shop extends SafeLoc {
     @Override
     public boolean onLocation(){
         System.out.println("---------Welcome to the Shop Center!!-----------");
-        System.out.println("Welcome " + this.getPlayer().getName() + " ... I'm a shop assistant. How can I halp you? What would you like to purchase");
+        System.out.println("Welcome " + getPlayer().getName() + " ... I'm a shop assistant. How can I halp you? What would you like to purchase");
         System.out.println();
         boolean showMenu = true;
         while(showMenu){
@@ -19,7 +19,7 @@ public class Shop extends SafeLoc {
 
             int selectCase = Location.input.nextInt();
             while(selectCase < 1 || selectCase > 3){
-            System.out.println("Invalid value, " + this.getPlayer().getName() +  " Please try again to enter new value:  ");
+            System.out.println("Invalid value, " + getPlayer().getName() +  " Please try again to enter new value:  ");
             selectCase = input.nextInt();
             }
 
@@ -66,15 +66,15 @@ public class Shop extends SafeLoc {
 
             if(selectedWeapon != null){
 
-                if(selectedWeapon.getPrice() > this.getPlayer.getMoney()){
+                if(selectedWeapon.getPrice() > getPlayer().getMoney()){
                 System.out.println("Insufficient balance!!");
                 } else {
                 // satin alma isleminin gerceklestigi alan
                 System.out.println("You bought " + selectedWeapon.getName() + " as a weapons");
-                int balance = this.getPlayer().getMoney() - selectedWeapon.getPrice();
-                this.getPlayer().setMoney(balance);
-                System.out.println("Rest Money: " + this.getPlayer().getMoney()); 
-                this.getPlayer().getInventory().setWeapon(selectedWeapon);
+                int balance = getPlayer().getMoney() - selectedWeapon.getPrice();
+                getPlayer().setMoney(balance);
+                System.out.println("Rest Money: " + getPlayer().getMoney()); 
+                getPlayer().getInventory().setWeapon(selectedWeapon);
                 }
             }
         }
@@ -104,15 +104,15 @@ public class Shop extends SafeLoc {
             Armor selectedArmor = Armor.getArmorObjByID(selectArmorID);
 
             if(selectedArmor != null){
-                if(selectedArmor.getPrice() > this.getPlayer.getMoney()){
+                if(selectedArmor.getPrice() > getPlayer().getMoney()){
                 System.out.println("Insufficient balance!!");
                 } else {
                 // satin alma isleminin gerceklestigi alan
                 System.out.println("You bought " + selectedArmor.getName() + " as a weapons");
-                int balance = this.getPlayer().getMoney() - selectedArmor.getPrice();
-                this.getPlayer().setMoney(balance);
-                System.out.println("Rest Money: " + this.getPlayer().getMoney()); 
-                this.getPlayer().getInventory().setArmor(selectedArmor);
+                int balance = getPlayer().getMoney() - selectedArmor.getPrice();
+                getPlayer().setMoney(balance);
+                System.out.println("Rest Money: " + getPlayer().getMoney()); 
+                getPlayer().getInventory().setArmor(selectedArmor);
                 }
             }
         }
