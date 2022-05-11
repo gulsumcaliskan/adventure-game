@@ -14,7 +14,7 @@ public abstract class Location {
         this.player = player;
     }
 
-    public abstract void onLocation(); // tum alt sınıflarda bu metotu yazsin
+    public abstract boolean onLocation(); // tum alt sınıflarda bu metotu yazsin
 
     public String getName(){
         return name;
