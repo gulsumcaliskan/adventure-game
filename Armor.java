@@ -20,7 +20,7 @@ public class Armor {
         return armorList;
     }
 
-    public static Armor getArmorObjById(int id){
+    public static Armor getArmorObjByID(int id){
         for(Armor a : Armor.armors()){
             if(a.getId() == id){
                 return a;
