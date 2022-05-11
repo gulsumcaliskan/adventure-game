@@ -9,21 +9,13 @@ public abstract class Location {
 
     private Scanner input = new Scanner(System.in); // alt sınıflara arismek icin protected kullandık
 
-    public Location(String name, Player player) {
-        this.name = name;
+    public Location(Player player, String name) {
         this.player = player;
+        this.name = name;
     }
 
     public abstract boolean onLocation(); // tum alt sınıflarda bu metotu yazsin
-
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    
     public Player getPlayer(){
         return player;
     }
@@ -32,9 +24,13 @@ public abstract class Location {
         this.player = player;
     }
 
-    
+    public String getName(){
+        return name;
+    }
 
-
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
 
