@@ -1,6 +1,6 @@
 public class Vampire extends Monster {
     
     public Vampire() {
-        super(2, "Vampire", 14, 4 ,7)
+        super(2, "Vampire", 14, 4 ,7);
     }
 }
